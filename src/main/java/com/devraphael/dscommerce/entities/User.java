@@ -109,11 +109,6 @@ public class User implements UserDetails {
 		return orders;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
 	public Set<Role> getRoles() {
 		return roles;
 	}
@@ -129,6 +124,11 @@ public class User implements UserDetails {
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
 	}
 
 	@Override
